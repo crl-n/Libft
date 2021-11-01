@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 /* function prototypes */
+void	*ft_memset(void *ptr, int x, size_t n);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
 int	ft_isdigit(int c);
