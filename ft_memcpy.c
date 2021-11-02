@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:42:37 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/02 15:13:47 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/02 15:16:05 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*tdst;
 	unsigned char	*tsrc;
 
