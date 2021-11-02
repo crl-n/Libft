@@ -6,16 +6,19 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:26:52 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/02 09:44:08 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/02 13:13:55 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
+	unsigned char	*ptr;
+
 	if (!s)
 		return ;
+	ptr = (unsigned char *) s;
 	while (n--)
-	{
-		*s++ = 0;
-	}
+		*ptr++ = 0;
 }
