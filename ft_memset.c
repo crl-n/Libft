@@ -6,22 +6,22 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:10:31 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/02 09:45:44 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/02 14:05:24 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *ptr, int x, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*tptr;
+	unsigned char	*ptr;
 
-	if (!ptr)
+	if (!b)
 		return ;
-	tptr = (unsigned char *)ptr;
-	while (n--)
+	ptr = (unsigned char *)b;
+	while (len--)
 	{
-		*tptr++ = (unsigned char)x;
+		*ptr++ = (unsigned char)c;
 	}
-	return (ptr);
+	return (b);
 }
