@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:26:52 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/02 13:13:55 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/02 14:52:17 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 
-	if (!s)
+	if (!s || n == 0)
 		return ;
 	ptr = (unsigned char *) s;
 	while (n--)
