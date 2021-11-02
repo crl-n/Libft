@@ -6,14 +6,17 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/01 19:46:55 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/02 12:58:12 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <string.h>
+
 /* function prototypes */
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *ptr, int x, size_t n);
