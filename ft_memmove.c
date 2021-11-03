@@ -6,12 +6,31 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:29:54 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/02 13:30:52 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/03 10:41:29 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memmove(void *dst, const void *src, size_t len)
-{
+#include "libft.h"
 
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	unsigned char	*temp;
+	size_t			i;
+
+	i = 0;
+	temp = (unsigned char *) malloc(len * sizeof (unsigned char));
+	if (!temp)
+		return (dst);
+	while (i < len)
+	{
+		temp[i] = ((unsigned char *) src)[i];
+		i++;
+	}
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *) dst)[i] = temp[i];
+		i++;
+	}
 	return (dst);
 }
