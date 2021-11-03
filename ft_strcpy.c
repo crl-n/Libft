@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:13:32 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/03 13:16:19 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/03 13:18:24 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 
+	i = 0;
 	while (src[i])
 	{
 		dst[i] = src[i];
