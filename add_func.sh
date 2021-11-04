@@ -14,7 +14,7 @@ function addfunc() {
 	
 	# Add prototype to libft.h if it's not already there
 	echo "Getting prototype from "$1
-	proto=$(sed -n '/'$name'(/p' < $1)';'
+	proto=$(sed -n '/'$name'(/p' < $1 | head -1)';'
 	echo "Prototype: "$proto
 	if ! grep -q $name libft.h
 	then
