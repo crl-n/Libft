@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 08:49:49 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/04 09:49:38 by cnysten          ###   ########.fr       */
+/*   Created: 2021/11/05 10:48:01 by cnysten           #+#    #+#             */
+/*   Updated: 2021/11/05 11:27:04 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+char	*ft_strtrim(char const *s)
 {
-	ft_putnbr(-42);
-	ft_putchar('\n');
-	ft_putnbr(0);
-	ft_putchar('\n');
-	ft_putnbr(42);
-	ft_putchar('\n');
-	return (0);
+	return (ft_strdup(s));
 }
