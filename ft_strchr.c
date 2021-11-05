@@ -6,13 +6,13 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:30:34 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/03 15:13:38 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/05 11:08:42 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
