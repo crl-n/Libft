@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 19:31:14 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/17 14:49:21 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/17 15:58:20 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,5 @@ int	ft_atoi(const char *str)
 		nb += (int)(*str - '0');
 		str++;
 	}
-	if (nb > 2147483647 && sign == 1)
-		return (-1);
-	if (nb > 2147483648 && sign == -1)
-		return (0);
 	return (nb * sign);
 }
