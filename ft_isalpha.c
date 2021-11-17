@@ -6,15 +6,13 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 14:50:44 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/05 15:19:37 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/11 19:15:18 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((char) c >= 'A' && (char) c <= 'Z')
-		return (1);
-	if ((char) c >= 'a' && (char) c <= 'z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }
