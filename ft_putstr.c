@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:12:48 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/03 16:15:54 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/17 18:34:00 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar(*s++);
 }
