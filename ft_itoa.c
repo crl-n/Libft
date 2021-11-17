@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:57:15 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/11 17:18:06 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/17 22:15:16 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ static size_t	ft_intlen(int n)
 	len = 0;
 	if (n == 0)
 		return (1);
+	if (n < 0)
+	{
+		n = -n;
+		len++;
+	}
 	while (n > 0)
 	{
 		n = n / 10;
@@ -27,12 +32,27 @@ static size_t	ft_intlen(int n)
 	return (len);
 }
 
+static int	handle_negative(int n, int *sign)
+{
+	if (n < 0)
+	{
+		*sign = -1;
+		n = -n;
+	}
+	return (n);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*s;
 	size_t	size;
+	int		sign;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	size = ft_intlen(n) + 1;
+	sign = 1;
+	n = handle_negative(n, &sign);
 	s = (char *) malloc(size * sizeof (char));
 	if (!s)
 		return (NULL);
@@ -42,5 +62,7 @@ char	*ft_itoa(int n)
 		s[--size] = '0' + (n % 10);
 		n = n / 10;
 	}
+	if (sign == -1)
+		s[0] = '-';
 	return (s);
 }
