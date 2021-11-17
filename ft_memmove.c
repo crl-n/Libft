@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:29:54 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/03 10:41:29 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/12 13:06:50 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*temp;
 	size_t			i;
 
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
 	temp = (unsigned char *) malloc(len * sizeof (unsigned char));
 	if (!temp)
