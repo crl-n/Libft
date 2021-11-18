@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:48:01 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/11 16:49:10 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/18 10:32:45 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,28 @@
 static size_t	trimmed_len(char const *s)
 {
 	size_t	len;
+	int		count;
 
 	len = 0;
+	count = 0;
 	while (*s == ' ' || *s == '\t' || *s == '\n')
 		s++;
-	while (*s++)
-		len++;
-	while (*s == ' ' || *s == '\t' || *s == '\n')
+	while (*s)
 	{
-		s--;
-		len--;
+		count = 0;
+		while (*s && !(*s == ' ' || *s == '\t' || *s == '\n'))
+		{
+			len++;
+			s++;
+		}
+		while (*s == ' ' || *s == '\t' || *s == '\n')
+		{
+			s++;
+			len++;
+			count++;
+		}
 	}
-	return (len);
+	return (len - count);
 }
 
 char	*ft_strtrim(char const *s)
@@ -35,7 +45,9 @@ char	*ft_strtrim(char const *s)
 	size_t	size;
 	size_t	i;
 
-	size = trimmed_len(s);
+	if (!s)
+		return (NULL);
+	size = trimmed_len(s) + 1;
 	trim = (char *) malloc(size * sizeof (char));
 	if (!trim)
 		return (NULL);
@@ -47,6 +59,6 @@ char	*ft_strtrim(char const *s)
 		trim[i] = s[i];
 		i++;
 	}
-	trim[size - 1] = '\0';
+	trim[i] = '\0';
 	return (trim);
 }
