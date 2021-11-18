@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:40:43 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/04 14:46:36 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:06:25 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	i;
 	char	*new;
 
+	if (!s)
+		return (NULL);
 	size = ft_strlen(s);
 	new = (char *) malloc(size + 1);
 	if (!new)
