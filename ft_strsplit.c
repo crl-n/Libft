@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:19:11 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/11 19:01:19 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/18 15:03:55 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	arr_size(char const *s, char c)
 		}
 		s++;
 	}
-	return (size);
+	return (size + 1);
 }
 
 static size_t	word_len(char const *s, char c)
@@ -56,21 +56,16 @@ static const char	*goto_next_word(const char *s, char c)
 	return (s);
 }
 
-char	**ft_strsplit(char const *s, char c)
+static char	**create_arr(char const *s, char c, size_t size, char **arr)
 {
-	char	**arr;
-	char	*word;
-	size_t	size;
-	size_t	len;
 	size_t	i;
+	size_t	len;
+	char	*word;
 
-	size = arr_size(s, c);
-	arr = (char **) malloc(size * sizeof (char *));
-	if (!arr)
-		return (NULL);
 	i = 0;
-	s = goto_next_word(s, c);
-	while (i < size)
+	while (*s == c)
+		s++;
+	while (i < size - 1)
 	{
 		len = word_len(s, c);
 		word = (char *) malloc((len + 1) * sizeof (char));
@@ -79,5 +74,21 @@ char	**ft_strsplit(char const *s, char c)
 		arr[i++] = word;
 		s = goto_next_word(s, c);
 	}
+	arr[i] = NULL;
+	return (arr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	size_t	size;
+
+	if (!s)
+		return (NULL);
+	size = arr_size(s, c);
+	arr = (char **) malloc(size * sizeof (char *));
+	if (!arr)
+		return (NULL);
+	arr = create_arr(s, c, size, arr);
 	return (arr);
 }
