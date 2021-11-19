@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:47:07 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/05 10:13:53 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:52:57 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*new;
 
+	if (!s)
+		return (NULL);
 	size = ft_strlen(s);
 	new = (char *) malloc(size + 1);
 	if (!new)
@@ -28,6 +30,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new[i] = f(i, s[i]);
 		i++;
 	}
-	new[size + 1] = '\0';
+	new[size] = '\0';
 	return (new);
 }
