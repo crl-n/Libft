@@ -7,7 +7,9 @@ function addfunc() {
 	# Add filename to Makefile if it's not already there
 	if ! grep -q $1 Makefile
 	then
-		sed -i'' -e '/SRCS =/s/$/ '$1'/' Makefile
+		sed -i'' -e '/SRCS =/a\
+			\	\ \ \ '$1' \\\
+		' Makefile
 		echo "Adding" $1 "to Makefile..."
 		rm Makefile-e
 	fi
