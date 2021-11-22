@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:19:11 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/18 15:03:55 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/22 13:33:45 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ static char	**create_arr(char const *s, char c, size_t size, char **arr)
 	return (arr);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**arr;
 	size_t	size;
