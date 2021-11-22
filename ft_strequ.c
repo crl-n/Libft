@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:01:41 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/04 15:04:05 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/17 22:19:30 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
+	if (s1 && !s2)
+		return (0);
+	if (!s1 && s2)
+		return (0);
+	if (!s1 && !s2)
+		return (1);
 	while (*s1 || *s2)
 	{
 		if (*s1 != *s2)
