@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:16:42 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/03 16:19:21 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:33:21 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar(*s++);
 	ft_putchar('\n');
