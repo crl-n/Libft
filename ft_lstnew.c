@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:04:42 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/18 14:11:07 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/19 14:24:05 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
+		new->content_size = content_size;
 		new->content = (void *) malloc(content_size);
 		if (new->content == NULL)
 		{
