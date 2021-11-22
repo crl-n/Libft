@@ -6,32 +6,48 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:38:13 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/22 17:32:09 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/22 18:10:48 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	del(void *ptr, size_t size)
+{
+	(void) size;
+	free(ptr);
+}
+
+static void	initialize(t_list **head, t_list **new, t_list **prev)
+{
+	*head = NULL;
+	*new = NULL;
+	*prev = NULL;
+}
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*head;
 	t_list	*new;
 	t_list	*prev;
-	int		first;
 
-	if (!lst)
+	if (!lst || !f)
 		return (NULL);
-	first = 1;
+	initialize(&head, &new, &prev);
 	while (lst)
 	{
-		if (first == 0)
+		if (new)
 			prev = new;
 		new = f(lst);
+		if (!new)
+		{
+			ft_lstdel(&head, del);
+			return (NULL);
+		}
 		if (prev)
 			prev->next = new;
-		if (first == 1)
+		if (!head)
 			head = new;
-		first = 0;
 		lst = lst->next;
 	}
 	return (head);
