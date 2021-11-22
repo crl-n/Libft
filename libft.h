@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/22 13:34:02 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/22 21:00:35 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_list
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-int	ft_strnequ(char const *s1, char const *s2, size_t n);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_strclr(char *s);
 void	ft_strdel(char **as);
