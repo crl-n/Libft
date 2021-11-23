@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 19:31:14 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/17 15:58:20 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/23 18:14:33 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_atoi(const char *str)
 	while (*str >= '0' && *str <= '9')
 	{
 		nb *= 10;
-		nb += (int)(*str - '0');
+		nb += (unsigned int)(*str - '0');
 		str++;
 	}
-	return (nb * sign);
+	return ((int) nb * sign);
 }
