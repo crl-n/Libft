@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/22 21:00:35 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/23 16:26:13 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ typedef struct s_list
 }	t_list;
 
 /* function prototypes */
+t_list	*ft_lstpop_left(t_list **head);
+void	ft_lstadd_back(t_list **alst, t_list *new);
+t_list	*ft_lstpop(t_list **lst);
+t_list	*ft_lstget(t_list *lst, size_t index);
+size_t	ft_lstsize(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
