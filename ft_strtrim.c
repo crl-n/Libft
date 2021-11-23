@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:48:01 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/18 10:32:45 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/23 18:15:58 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static size_t	trimmed_len(char const *s)
 {
 	size_t	len;
-	int		count;
+	size_t	count;
 
 	len = 0;
 	count = 0;
