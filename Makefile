@@ -13,6 +13,11 @@
 NAME = libft.a
 
 SRCS = ft_isalpha.c \
+	   ft_lstpop_left.c \
+	   ft_lstadd_back.c \
+	   ft_lstpop.c \
+	   ft_lstget.c \
+	   ft_lstsize.c \
 	   ft_lstmap.c \
 	   ft_strstr.c \
 	   ft_strncat.c \
