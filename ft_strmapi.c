@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:47:07 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/19 16:52:57 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/23 18:16:36 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (i < size)
 	{
-		new[i] = f(i, s[i]);
+		new[i] = f((unsigned int) i, s[i]);
 		i++;
 	}
 	new[size] = '\0';
