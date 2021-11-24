@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:19:11 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/22 13:33:45 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/11/24 09:44:43 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,13 @@ static char	**create_arr(char const *s, char c, size_t size, char **arr)
 	{
 		len = word_len(s, c);
 		word = (char *) malloc((len + 1) * sizeof (char));
+		if (!word)
+		{
+			while (i--)
+				free(arr[i]);
+			free(arr);
+			return (NULL);
+		}
 		ft_strncpy(word, s, len);
 		word[len] = '\0';
 		arr[i++] = word;
