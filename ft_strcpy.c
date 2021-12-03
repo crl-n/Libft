@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:13:32 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/17 19:13:58 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/03 18:20:09 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char	*ft_strcpy(char *dst, const char *src)
 		dst[i] = src[i];
 		i++;
 	}
-	if (src[i] == '\0')
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (dst);
 }
