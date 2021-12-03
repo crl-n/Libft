@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:07:47 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/23 17:13:52 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/03 17:57:42 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*lst;
 
-	if (!new)
+	if (!new || !alst)
 		return ;
 	if (*alst)
 	{
