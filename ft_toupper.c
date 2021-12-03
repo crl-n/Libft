@@ -6,11 +6,11 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 16:08:04 by cnysten           #+#    #+#             */
-/*   Updated: 2021/10/30 16:13:52 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/03 17:25:15 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int static	ft_islower(int c)
+static int	ft_islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
