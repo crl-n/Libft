@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:46:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/23 16:28:28 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/03 18:16:05 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstpop(t_list **head)
 	t_list	*prev;
 	t_list	*lst;
 
+	if (!head)
+		return (NULL);
 	if (!*head)
 		return (NULL);
 	lst = *head;
