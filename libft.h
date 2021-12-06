@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/24 14:56:41 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/06 16:34:39 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct s_list
 }	t_list;
 
 /* function prototypes */
+int		ft_islower(int c);
+int		ft_isupper(int c);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
