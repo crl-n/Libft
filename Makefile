@@ -6,7 +6,7 @@
 #    By: cnysten <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 20:50:24 by cnysten           #+#    #+#              #
-#    Updated: 2021/11/24 08:11:14 by cnysten          ###   ########.fr        #
+#    Updated: 2021/12/06 16:32:34 by cnysten          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@
 NAME = libft.a
 
 SRCS = ft_atoi.c \
+	   ft_islower.c \
+	   ft_isupper.c \
 	   ft_bzero.c \
 	   ft_isalnum.c \
 	   ft_isalpha.c \
