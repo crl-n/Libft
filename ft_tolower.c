@@ -6,16 +6,11 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 16:14:31 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/03 17:24:32 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/06 16:35:20 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_isupper(int c)
-{
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
