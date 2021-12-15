@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:03:16 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/15 17:48:41 by cnysten          ###   ########.fr       */
+/*   Updated: 2021/12/15 17:51:15 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ char	*ft_strndup(const char *s1, size_t n)
 		return (NULL);
 	ft_strncpy(dup, s1, n);
 	dup[n] = '\0';
-	return (s2);
+	return (dup);
 }
