@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len1;
 	size_t	len2;
 	size_t	size;
-	char	*join;
+	char	*new;
 
 	if (!s1 && s2)
 		return (ft_strdup(s2));
@@ -28,11 +28,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	size = len1 + len2 + 1;
-	join = (char *) malloc(size * sizeof (char));
-	if (!join)
+	new = (char *) malloc(size * sizeof (char));
+	if (!new)
 		return (NULL);
-	join[size - 1] = '\0';
-	ft_strcpy(join, s1);
-	ft_strcat(join, s2);
-	return (join);
+	new[size - 1] = '\0';
+	ft_memcpy((void *) new, s1, len1);
+	ft_memcpy((void *) (new + len1), s2, len2);
+	return (new);
 }
