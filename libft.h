@@ -25,6 +25,7 @@ typedef struct s_list
 }	t_list;
 
 /* function prototypes */
+char	*ft_itoa_base(int value, int base);
 char	*ft_strndup(const char *s1, size_t n);
 int		ft_islower(int c);
 int		ft_isupper(int c);
