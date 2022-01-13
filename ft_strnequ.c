@@ -6,11 +6,9 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:04:15 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/22 21:00:19 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:50:46 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {

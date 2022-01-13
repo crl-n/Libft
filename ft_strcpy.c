@@ -6,11 +6,9 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:13:32 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/03 18:20:09 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:46:05 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

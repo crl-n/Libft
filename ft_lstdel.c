@@ -6,11 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:47:53 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/03 18:08:46 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:02:58 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {

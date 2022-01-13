@@ -6,11 +6,11 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:10:31 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/22 18:23:48 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:57:44 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

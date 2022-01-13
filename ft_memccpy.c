@@ -6,11 +6,9 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:20:54 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/03 18:25:48 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:59:08 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

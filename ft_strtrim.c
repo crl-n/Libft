@@ -6,11 +6,11 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:48:01 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/23 18:15:58 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:55:02 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static size_t	trimmed_len(char const *s)
 {

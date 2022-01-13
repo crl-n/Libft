@@ -6,11 +6,11 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:13:51 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/04 10:42:34 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:59:23 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {

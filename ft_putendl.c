@@ -6,11 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:16:42 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/03 18:29:50 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:56:06 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putendl(char const *s)
 {

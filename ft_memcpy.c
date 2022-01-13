@@ -6,11 +6,11 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:42:37 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/23 18:34:48 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:58:18 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

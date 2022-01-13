@@ -6,11 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:38:13 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/06 16:29:02 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:01:35 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 static void	initialize(t_list **head, t_list **new, t_list **prev)
 {

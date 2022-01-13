@@ -6,11 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:46:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/03 18:16:05 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:00:50 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 t_list	*ft_lstpop(t_list **head)
 {

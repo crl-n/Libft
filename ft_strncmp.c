@@ -6,11 +6,9 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:04:09 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/12 13:45:12 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:50:05 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

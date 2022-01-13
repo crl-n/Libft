@@ -6,11 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:19:11 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/24 09:47:56 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 20:54:01 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	arr_size(char const *s, char c)
 {

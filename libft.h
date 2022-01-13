@@ -6,16 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2021/12/06 16:34:39 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:03:43 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 typedef struct s_list
 {

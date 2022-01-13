@@ -6,11 +6,12 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:25:06 by cnysten           #+#    #+#             */
-/*   Updated: 2021/11/23 14:53:48 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:02:14 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 t_list	*ft_lstget(t_list *lst, size_t index)
 {
