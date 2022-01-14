@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdlib.h>
+
 #define MIN_INT -2147483648
 
 static size_t	ft_intlen_base(int value, int base)
