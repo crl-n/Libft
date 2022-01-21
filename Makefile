@@ -15,8 +15,6 @@
 NAME = libft.a
 
 SRCS = ft_atoi.c \
-	   ft_itoa_base.c \
-	   ft_itoa_base \
 	   ft_strndup.c \
 	   ft_islower.c \
 	   ft_isupper.c \
@@ -27,6 +25,7 @@ SRCS = ft_atoi.c \
 	   ft_isdigit.c \
 	   ft_isprint.c \
 	   ft_itoa.c \
+	   ft_itoa_base.c \
 	   ft_lstadd.c \
 	   ft_lstadd_back.c \
 	   ft_lstdel.c \
