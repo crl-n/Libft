@@ -12,10 +12,12 @@
 
 #include "libft.h"
 #include <string.h>
+#include <stdlib.h>
 
-t_list	*ft_lstpop_left(t_list **head)
+void	*ft_lstpop_left(t_list **head)
 {
 	t_list	*lst;
+	void	*content;
 
 	if (!head)
 		return (NULL);
@@ -27,5 +29,7 @@ t_list	*ft_lstpop_left(t_list **head)
 	else
 		*head = NULL;
 	lst->next = NULL;
-	return (lst);
+	content = lst->content;
+	free(lst);
+	return (content);
 }
