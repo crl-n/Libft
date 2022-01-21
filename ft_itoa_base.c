@@ -14,28 +14,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define MIN_INT -2147483648
-
-static size_t	ft_intlen_base(int value, int base)
-{
-	size_t	len;
-
-	len = 0;
-	if (value == 0)
-		return (1);
-	if (base == 10 && value < 0)
-	{
-		value = -value;
-		len++;
-	}
-	while (value > 0)
-	{
-		value = value / base;
-		len++;
-	}
-	return (len);
-}
-
 /* get_char() converts an int into a corresponding digit of its base */
 
 static char	get_char(int n)
@@ -48,20 +26,11 @@ static char	get_char(int n)
 	return (c);
 }
 
-static char	*min_int(int base)
-{
-	if (base == 10)
-		return (ft_strdup("-2147483648"));
-	return (NULL);
-}
-
 char	*ft_itoa_base(int value, int base)
 {
 	char	*str;
 	size_t	size;
 
-	if (value == MIN_INT)
-		return (min_int(base));
 	size = ft_intlen_base(value, base) + 1;
 	str = (char *) malloc(size * sizeof (char));
 	if (!str)
