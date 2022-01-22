@@ -1,50 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   utoa_base.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cnysten <cnysten@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 16:57:15 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/22 19:29:17 by cnysten          ###   ########.fr       */
+/*   Created: 2022/01/22 17:30:59 by cnysten           #+#    #+#             */
+/*   Updated: 2022/01/22 17:39:51 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 #include <string.h>
 
-static int	handle_negative(int n, int *sign)
+static char	get_uint_char(unsigned int n)
 {
-	if (n < 0)
+	char	c;
+
+	c = (char) n + '0';
+	if (c > '9')
 	{
-		*sign = -1;
-		n = -n;
+		c += 39;
 	}
-	return (n);
+	return (c);
 }
 
-char	*ft_itoa(int n)
+
+static size_t	ft_uint_len_base(unsigned int n, int base)
+{
+	size_t	len;
+
+	len = 0;
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n = n / base;
+		len++;
+	}
+	return (len);
+}
+
+char	*utoa_base(unsigned int n, int base)
 {
 	char	*s;
 	size_t	size;
-	int		sign;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	size = ft_intlen(n) + 1;
-	sign = 1;
-	n = handle_negative(n, &sign);
+	size = ft_uint_len_base(n, base) + 1;
 	s = (char *) malloc(size * sizeof (char));
 	if (!s)
 		return (NULL);
 	s[--size] = '\0';
 	while (size > 0)
 	{
-		s[--size] = '0' + (n % 10);
-		n = n / 10;
+		s[--size] = get_uint_char(n % base);
+		n = n / base;
 	}
-	if (sign == -1)
-		s[0] = '-';
 	return (s);
 }

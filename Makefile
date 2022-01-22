@@ -6,7 +6,7 @@
 #    By: cnysten <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 20:50:24 by cnysten           #+#    #+#              #
-#    Updated: 2021/12/06 16:32:34 by cnysten          ###   ########.fr        #
+#    Updated: 2022/01/22 17:39:16 by cnysten          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,12 @@
 NAME = libft.a
 
 SRCS = ft_atoi.c \
-	   ft_strndup.c \
+				   ft_intlen.c \
+			   ft_strndup.c \
 	   ft_islower.c \
 	   ft_isupper.c \
 	   ft_bzero.c \
+	   ft_intlen_base.c \
 	   ft_isalnum.c \
 	   ft_isalpha.c \
 	   ft_isascii.c \
@@ -81,6 +83,8 @@ SRCS = ft_atoi.c \
 	   ft_strtrim.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
+	   utoa.c \
+	   utoa_base.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
