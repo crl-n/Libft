@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/22 19:31:51 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/02/11 22:57:32 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-size_t	ft_intlen(int value);
+size_t	ft_intlen(long value);
 size_t	ft_intlen_base(int value, int base);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -38,7 +38,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
 char	*ft_itoa_base(int n, int base);
-char	*utoa(unsigned int n);
+//char	*utoa(unsigned int n);
 char	*utoa_base(int n, int base);
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstadd_back(t_list **alst, t_list *new);

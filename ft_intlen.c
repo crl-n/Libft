@@ -6,13 +6,13 @@
 /*   By: cnysten <cnysten@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 19:29:34 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/22 19:31:06 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/02/11 22:57:16 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_intlen(int n)
+size_t	ft_intlen(long n)
 {
 	size_t	len;
 
