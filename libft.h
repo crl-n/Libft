@@ -6,14 +6,14 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/22 19:31:51 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/03/08 14:09:20 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
+# include <string.h>
 
 typedef struct s_list
 {
@@ -38,10 +38,10 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
 char	*ft_itoa_base(int n, int base);
-char	*utoa(unsigned int n);
+//char	*utoa(unsigned int n);
 char	*utoa_base(int n, int base);
-void	ft_lstadd(t_list **alst, t_list *new);
-void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstadd(t_list **alst, t_list *new_node);
+void	ft_lstadd_back(t_list **alst, t_list *new_node);
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 t_list	*ft_lstget(t_list *lst, size_t index);

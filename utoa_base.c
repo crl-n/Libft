@@ -6,7 +6,7 @@
 /*   By: cnysten <cnysten@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 17:30:59 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/22 17:39:51 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/03/08 14:08:04 by cnysten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ static char	get_uint_char(unsigned int n)
 	}
 	return (c);
 }
-
 
 static size_t	ft_uint_len_base(unsigned int n, int base)
 {
