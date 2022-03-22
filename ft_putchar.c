@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:10:21 by cnysten           #+#    #+#             */
-/*   Updated: 2022/02/19 12:06:16 by carlnysten       ###   ########.fr       */
+/*   Updated: 2022/02/19 12:12:02 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	get_char_width(int c)
 	return (0);
 }
 
-void	putchar(int c)
+void	ft_putchar(char c)
 {
 	static char	arr[4];
 	static int	char_width;

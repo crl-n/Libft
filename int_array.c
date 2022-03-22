@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen_base.c                                   :+:      :+:    :+:   */
+/*   int_array.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlnysten <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 19:02:07 by carlnysten        #+#    #+#             */
-/*   Updated: 2022/03/22 19:02:09 by carlnysten       ###   ########.fr       */
+/*   Created: 2022/03/22 18:22:38 by carlnysten        #+#    #+#             */
+/*   Updated: 2022/03/22 18:23:36 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_intlen_base(int value, int base)
+int	**int_array_2d(int n_rows, int n_cols)
 {
-	size_t	len;
+	int		**arr;
+	int		*cells;
+	int		i;
+	size_t	size;
 
-	len = 0;
-	if (value == 0)
-		return (1);
-	if (base == 10 && value < 0)
+	size = n_rows * sizeof (int *) + n_cols * sizeof (int);
+	arr = (int **) malloc(size);
+	if (!arr)
+		return (NULL);
+	ft_bzero(arr, size);
+	cells = (int *)(arr + n_rows);
+	i = 0;
+	while (i < n_rows)
 	{
-		value = -value;
-		len++;
+		arr[i] = cells + i * n_cols;
+		i++;
 	}
-	while (value > 0)
-	{
-		value = value / base;
-		len++;
-	}
-	return (len);
+	return (arr);
 }

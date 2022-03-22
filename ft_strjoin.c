@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:27:29 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/13 20:48:45 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/03/22 19:02:33 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	new[size - 1] = '\0';
 	ft_memcpy((void *) new, s1, len1);
-	ft_memcpy((void *) (new + len1), s2, len2);
+	ft_memcpy((void *)(new + len1), s2, len2);
 	return (new);
 }

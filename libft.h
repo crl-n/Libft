@@ -6,14 +6,14 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2022/02/11 22:57:32 by carlnysten       ###   ########.fr       */
+/*   Updated: 2022/03/22 19:04:26 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
+# include <string.h>
 
 typedef struct s_list
 {
@@ -40,8 +40,8 @@ char	*ft_itoa(int n);
 char	*ft_itoa_base(int n, int base);
 //char	*utoa(unsigned int n);
 char	*utoa_base(int n, int base);
-void	ft_lstadd(t_list **alst, t_list *new);
-void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstadd(t_list **alst, t_list *node);
+void	ft_lstadd_back(t_list **alst, t_list *node);
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 t_list	*ft_lstget(t_list *lst, size_t index);
@@ -95,5 +95,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		**int_array_2d(int n_rows, int n_cols);
 
 #endif

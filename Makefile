@@ -6,7 +6,7 @@
 #    By: cnysten <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 20:50:24 by cnysten           #+#    #+#              #
-#    Updated: 2022/01/22 23:57:22 by cnysten          ###   ########.fr        #
+#    Updated: 2022/03/22 19:04:02 by carlnysten       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,7 @@ SRCS = ft_atoi.c \
 	   ft_strtrim.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
-	   utoa.c \
-	   utoa_base.c \
+	   int_array.c
 
 OBJS = $(SRCS:%.c=%.o)
 
