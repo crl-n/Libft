@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr2(int n)
 {
 	char	str[12];
 	size_t	i;
@@ -24,13 +24,12 @@ void	ft_putnbr(int n)
 	{
 		ft_bzero(str, 12);
 		i = 10;
+		sign = 1;
 		if (n < 0)
 		{
 			sign = -1;
 			n = n * (-1);
 		}
-		else
-			sign = 1;
 		while (n > 9)
 		{
 			str[i--] = (char)(n % 10 + '0');
