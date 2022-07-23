@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   int_array.c                                        :+:      :+:    :+:   */
+/*   array_2d.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlnysten <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 18:22:38 by carlnysten        #+#    #+#             */
-/*   Updated: 2022/03/22 18:23:36 by carlnysten       ###   ########.fr       */
+/*   Created: 2022/07/23 23:07:22 by carlnysten        #+#    #+#             */
+/*   Updated: 2022/07/23 23:27:22 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-int	**int_array_2d(int n_rows, int n_cols)
+void	*array2d(size_t rows, size_t cols, size_t elem_size)
 {
-	int		**arr;
-	int		*cells;
-	int		i;
-	size_t	size;
+	void			**arr;
+	unsigned char	*cells;
+	size_t			i;
 
-	size = n_rows * sizeof (int *) + n_cols * sizeof (int);
-	arr = (int **) malloc(size);
+	if (rows == 0 || cols == 0 || elem_size == 0)
+		return (NULL);
+	arr = ft_memalloc(rows * (sizeof (void *) + cols * elem_size));
 	if (!arr)
 		return (NULL);
-	ft_bzero(arr, size);
-	cells = (int *)(arr + n_rows);
+	cells = (unsigned char *)(arr + rows);
 	i = 0;
-	while (i < n_rows)
+	while (i < rows)
 	{
-		arr[i] = cells + i * n_cols;
+		arr[i] = cells + (i * cols);
 		i++;
 	}
 	return (arr);
