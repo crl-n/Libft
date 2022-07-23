@@ -6,13 +6,17 @@
 #    By: cnysten <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 20:50:24 by cnysten           #+#    #+#              #
-#    Updated: 2022/03/22 19:04:02 by carlnysten       ###   ########.fr        #
+#    Updated: 2022/07/23 22:59:00 by carlnysten       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all, clean, fclean, re
 
+CC := gcc
+CFLAGS := -Wall -Wextra -Werror
+
 NAME = libft.a
+INC = -I.
 
 SRCS = ft_atoi.c \
 	   ft_intlen.c \
@@ -83,18 +87,24 @@ SRCS = ft_atoi.c \
 	   ft_strtrim.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
-	   int_array.c
+	   int_array.c \
 
-OBJS = $(SRCS:%.c=%.o)
+OBJ_DIR = ./objs
+OBJS = $(SRCS:%.c=$(OBJ_DIR)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	gcc -Wall -Wextra -Werror -c $(SRCS)
+$(NAME): $(OBJ_DIR) $(OBJS) 
 	ar rc $(NAME) $(OBJS)
 
+$(OBJ_DIR)/%.o: %.c
+	$(CC) -c $(CFLAGS) $(INC) $< -o $@
+
+$(OBJ_DIR):
+	mkdir $@
+
 clean:
-	-/bin/rm -f $(OBJS)
+	-/bin/rm -rf $(OBJ_DIR)
 
 fclean: clean
 	-/bin/rm -f $(NAME)
