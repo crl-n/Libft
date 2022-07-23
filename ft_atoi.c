@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 19:31:14 by cnysten           #+#    #+#             */
-/*   Updated: 2022/01/13 20:43:52 by cnysten          ###   ########.fr       */
+/*   Updated: 2022/07/23 22:27:56 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static int	ft_iswhite(int c)
 
 int	ft_atoi(const char *str)
 {
-	int				sign;
-	unsigned int	nb;
+	int	sign;
+	int	nb;
 
 	sign = 1;
 	nb = 0;
@@ -38,8 +38,8 @@ int	ft_atoi(const char *str)
 	while (*str >= '0' && *str <= '9')
 	{
 		nb *= 10;
-		nb += (unsigned int)(*str - '0');
+		nb += (int)(*str - '0');
 		str++;
 	}
-	return ((int) nb * sign);
+	return (nb * sign);
 }
