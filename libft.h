@@ -6,7 +6,7 @@
 /*   By: cnysten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:57:20 by cnysten           #+#    #+#             */
-/*   Updated: 2022/03/22 19:04:26 by carlnysten       ###   ########.fr       */
+/*   Updated: 2022/07/24 22:23:01 by carlnysten       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# define OK 1
+# define ERROR -1
 
 typedef struct s_list
 {
