@@ -6,7 +6,7 @@
 #    By: cnysten <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 20:50:24 by cnysten           #+#    #+#              #
-#    Updated: 2022/07/23 23:35:04 by carlnysten       ###   ########.fr        #
+#    Updated: 2022/07/28 22:37:16 by carlnysten       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,12 @@ SRCS = ft_atoi.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
 	   array2d.c \
+	   vec_new.c \
+	   vec_free.c \
+	   vec_get.c \
+	   vec_rev.c \
+	   vec_iter.c \
+	   vec_reduce.c
 
 OBJ_DIR = ./objs
 OBJS = $(SRCS:%.c=$(OBJ_DIR)/%.o)
